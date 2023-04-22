@@ -1,4 +1,5 @@
-// -_- ^_^
+import React from "react";
 
-// hi chrizz
-// -________- ^v^ ^________________^
+export default function Home() {
+  return <div>Our lovely homepage</div>;
+}

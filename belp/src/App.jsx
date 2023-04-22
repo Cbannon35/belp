@@ -3,14 +3,8 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import styled from "styled-components";
 import "./App.css";
-
-function Loading() {
-  return (
-    <>
-      <p>loading!</p>
-    </>
-  );
-}
+import Home from "./pages/Home";
+import Loading from "./pages/Loading";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,7 +20,7 @@ function App() {
     // }
   }, []);
 
-  return <>{loadscreen ? <Loading /> : <p>loaded!</p>}</>;
+  return <>{loadscreen ? <Loading /> : <Home />}</>;
 }
 
 export default App;
