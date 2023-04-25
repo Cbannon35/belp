@@ -1,7 +1,7 @@
 // A file to keep all of our reusable components
 // Normally list items, or components that take props / bathroom info
 
-import styles from "../css/components.module.css";
+import styles from "./css/components.module.css";
 import { AiFillEnvironment } from "react-icons/ai";
 
 export const Sliders = ({ rating }) => {
@@ -32,7 +32,7 @@ export const Rating = ({ rating }) => {
       {Array(5)
         .fill(0)
         .map((_, index) => {
-          return <img src={determineToilet(index, rating)}></img>;
+          return <img src={determineToilet(index, rating)} key={index}></img>;
         })}
     </div>
   );
@@ -41,7 +41,6 @@ export const Rating = ({ rating }) => {
 export const BathroomCard = ({ bathroom }) => {
   return (
     <div>
-      <image></image>
       <Rating rating={bathroom.rating} />
       <div>
         <AiFillEnvironment />

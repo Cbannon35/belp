@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import styles from "../css/Loading.module.css";
 
 const b1 = "images/belp1.png";
 const b2 = "images/belp2.png";
@@ -8,15 +9,15 @@ const b4 = "images/belp4.png";
 const b5 = "images/belp5.png";
 const b6 = "images/belp6.png";
 
-const LoadingContainer = styled.div`
+const Load = styled.div`
   animation: changeBg 5s;
   animation-timing-function: ease-in-out;
 
   background-repeat: no-repeat;
   background-position: center;
 
-  width: 400px;
-  height: 400px;
+  height: 200px;
+  width: 200px;
 
   @keyframes changeBg {
     0% {
@@ -44,5 +45,9 @@ const LoadingContainer = styled.div`
 `;
 
 export default function Loading() {
-  return <LoadingContainer />;
+  return (
+    <div className={styles.loadingContainer}>
+      <Load />
+    </div>
+  );
 }

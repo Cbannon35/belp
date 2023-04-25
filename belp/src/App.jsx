@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Home from "./pages/Home";
 import Loading from "./pages/loading";
+import "./global.css";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,6 +18,7 @@ function App() {
   }, []);
 
   return <>{loadscreen ? <Loading /> : <Home />}</>;
+  // return <Loading />;
 }
 
 export default App;

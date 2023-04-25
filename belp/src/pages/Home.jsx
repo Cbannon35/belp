@@ -3,16 +3,18 @@ import styles from "../css/Home.module.css";
 import { useState, useEffect } from "react";
 import { FiSearch } from "react-icons/fi";
 import user from "../assets/user.webp";
-import { GOOGLE_MAPS_API_KEY } from "../../config.json";
+import { bathrooms } from "../data/data";
+import { BathroomCard } from "../components";
 
 // google maps
 import { Loader } from "@googlemaps/js-api-loader";
+import { GOOGLE_MAPS_API_KEY } from "../../config.json";
 const loader = new Loader({
   apiKey: GOOGLE_MAPS_API_KEY,
   version: "weekly",
 });
-let map;
 
+let map;
 export default function Home() {
   useEffect(() => {
     loader.load().then(() => {
@@ -44,6 +46,7 @@ export default function Home() {
     //   handleLocationError(false, infoWindow, map.getCenter());
     // }
   }, []);
+
   return (
     <div>
       <div className={styles.upper}>
@@ -55,8 +58,15 @@ export default function Home() {
           <img src={user} className={styles.userButton} />
         </button>
       </div>
+
       <div className={styles.mapContainer}>
         <div id="map" className={styles.map}></div>
+      </div>
+
+      <div className={styles.bathroomContainer}>
+        {bathrooms.map((bathroom, i) => {
+          return <BathroomCard bathroom={bathroom} key={i} />;
+        })}
       </div>
     </div>
   );
