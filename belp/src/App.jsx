@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Home from "./pages/Home";
 import Loading from "./pages/loading";
+import User from "./pages/User"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,7 +18,15 @@ function App() {
     // }
   }, []);
 
-  return <>{loadscreen ? <Loading /> : <Home />}</>;
+  return <>{
+    loadscreen ? <Loading /> : 
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/user" element={<User />} />
+        </Routes>
+      </BrowserRouter>
+    }</>;
 }
 
 export default App;

@@ -3,6 +3,7 @@ import styles from "../css/Home.module.css";
 import { useState, useEffect } from "react";
 import { FiSearch } from "react-icons/fi";
 import user from "../assets/user.webp";
+import { NavLink } from 'react-router-dom';
 import { GOOGLE_MAPS_API_KEY } from "../../config.json";
 
 // google maps
@@ -51,9 +52,11 @@ export default function Home() {
           <FiSearch className={styles.searchIcon} />
           <input className={styles.search} type="text" />
         </div>
-        <button className={styles.buttonContainer}>
-          <img src={user} className={styles.userButton} />
-        </button>
+        <NavLink to="/user">
+          <button className={styles.buttonContainer}>
+            <img src={user} className={styles.userButton} />
+          </button>
+        </NavLink>
       </div>
       <div className={styles.mapContainer}>
         <div id="map" className={styles.map}></div>
