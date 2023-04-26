@@ -1,6 +1,7 @@
 import React from "react";
-import styles from "../css/User.module.css"
-import userimg from "../assets/user.webp"
+import styles from "../css/User.module.css";
+import userimg from "../assets/user.webp";
+import { NavLink } from "react-router-dom";
 import { useState } from 'react';
 
 export default function User() {
@@ -11,24 +12,17 @@ export default function User() {
   return (
     <div className={styles.page}>
       <div className={styles.imgContainer}>
-        <img src={userimg} className={styles.userImg}/>
+        <img src={userimg} className={styles.userImg} />
       </div>
       <div className={styles.midSection}>
         <div className={styles.infoContainer}>
-          <div className={styles.blueBox}>
-          </div>
+          <div className={styles.blueBox}></div>
           <div className={styles.userInfo}>
-            <div className={styles.textInfo}>
-              Username
-            </div>
+            <div className={styles.textInfo}>Username</div>
             <div className={styles.pw}>
-              <div className={styles.textInfo}>
-                Password
-              </div>
+              <div className={styles.textInfo}>Password</div>
             </div>
-            <div className={styles.textInfo}>
-              Change password
-            </div>
+            <div className={styles.textInfo}>Change password</div>
           </div>
         </div>
       </div>
@@ -42,9 +36,12 @@ export default function User() {
          </button>
         </div>
       </div>
-      <div className={styles.bathrooms}>
-      </div>
-     
+      <div className={styles.bathrooms}></div>
+      <NavLink to="/">
+        <button className={styles.backContainer}>
+          <img src={""} className={styles.backButton} />
+        </button>
+      </NavLink>
     </div>
   );
 }
