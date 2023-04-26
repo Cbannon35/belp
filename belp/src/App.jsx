@@ -3,6 +3,8 @@ import Home from "./pages/Home";
 import Loading from "./pages/loading";
 import User from "./pages/User"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./global.css";
+
 
 function App() {
   const [count, setCount] = useState(0);
