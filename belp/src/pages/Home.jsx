@@ -3,8 +3,7 @@ import styles from "../css/Home.module.css";
 import { useState, useEffect } from "react";
 import { FiSearch } from "react-icons/fi";
 import user from "../assets/user.webp";
-import { NavLink } from 'react-router-dom';
-import { GOOGLE_MAPS_API_KEY } from "../../config.json";
+import { NavLink } from "react-router-dom";
 import { bathrooms } from "../data/data";
 import { BathroomCard } from "../components";
 
@@ -18,7 +17,12 @@ const loader = new Loader({
 
 let map;
 export default function Home() {
+  // to limit calls to our api
+  // refresh page to reset
+  let [requested, setRequested] = useState(false);
   useEffect(() => {
+    if (requested) return;
+
     loader.load().then(() => {
       map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 37.8719, lng: 122.2585 },
@@ -47,6 +51,7 @@ export default function Home() {
     //   // Browser doesn't support Geolocation
     //   handleLocationError(false, infoWindow, map.getCenter());
     // }
+    setRequested(true);
   }, []);
 
   return (

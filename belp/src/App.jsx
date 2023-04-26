@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import Home from "./pages/Home";
 import Loading from "./pages/loading";
-import User from "./pages/User"
+import User from "./pages/User";
+import { Info } from "./pages/Info";
+import { Review } from "./pages/Review";
+import { Reviews } from "./pages/Reviews";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./global.css";
-
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,15 +22,23 @@ function App() {
     // }
   }, []);
 
-  return <>{
-    loadscreen ? <Loading /> : 
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/user" element={<User />} />
-        </Routes>
-      </BrowserRouter>
-    }</>;
+  return (
+    <>
+      {loadscreen ? (
+        <Loading />
+      ) : (
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/user" element={<User />} />
+            <Route path="/info" element={<Info />} />
+            <Route path="/info/review" element={<Review />} />
+            <Route path="/info/reviews" element={<Reviews />} />
+          </Routes>
+        </BrowserRouter>
+      )}
+    </>
+  );
 }
 
 export default App;

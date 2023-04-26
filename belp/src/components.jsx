@@ -14,26 +14,38 @@ export const Sliders = ({ rating }) => {
   );
 };
 
-export const Rating = ({ rating }) => {
+// Type is either "five" or "circle"
+export const Rating = ({ rating, type }) => {
   const filled_toilet = "images/good_toilet.png";
   const clear_toilet = "images/bad_toilet.png";
   // lol what a name
   // will render a filled toilet or a clear toilet
-  function determineToilet(index, rating) {
-    if (index < rating) {
-      return filled_toilet;
-    } else {
-      return clear_toilet;
-    }
-  }
-
-  return (
+  function fiveToilets() {
     <div>
       {Array(5)
         .fill(0)
         .map((_, index) => {
-          return <img src={determineToilet(index, rating)} key={index}></img>;
+          return (
+            <img
+              src={index < rating ? filled_toilet : clear_toilet}
+              key={index}
+            ></img>
+          );
         })}
+    </div>;
+  }
+  function circleToilet() {
+    let calculated_name = "images/belp" + rating.toString() + ".png";
+    return (
+      <div>
+        <img src={calculated_name}></img>
+      </div>
+    );
+  }
+
+  return (
+    <div className={styles.type}>
+      {type === "five" ? fiveToilets() : circleToilet()}
     </div>
   );
 };
@@ -41,7 +53,7 @@ export const Rating = ({ rating }) => {
 export const BathroomCard = ({ bathroom }) => {
   return (
     <div>
-      <Rating rating={bathroom.rating} />
+      <Rating rating={bathroom.rating} type={"circle"} />
       <div>
         <AiFillEnvironment />
         <div>{bathroom.title}</div>
@@ -57,7 +69,7 @@ export const ReviewCard = ({ review }) => {
       <div>{review.user}</div>
       <div>
         <Sliders rating={review.slider_rating} />
-        <Rating rating={review.rating} />
+        <Rating rating={review.rating} type={"five"} />
       </div>
       <div>{review.review}</div>
     </div>
