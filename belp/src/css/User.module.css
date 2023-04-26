@@ -1,0 +1,57 @@
+.page {
+    margin: 50px;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userImg {
+    height: 150px;
+    box-shadow: 0px 0px 8px #ddd;
+    border-radius: 20px;
+}
+
+.midSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    box-shadow: 0px 0px 8px #ddd;
+    width: 600px;
+    height: 150px;
+    border-radius: 15px;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.blueBox {
+    width: 25px;
+    height: 150px;
+    background-color: #1FA5FF;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.pw {
+    border-top: 1px solid #1FA5FF;
+    border-bottom: 1px solid #1FA5FF;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.textInfo {
+    padding: 10px;
+    font-size: 20px;
+}
