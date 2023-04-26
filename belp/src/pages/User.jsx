@@ -17,13 +17,30 @@ export default function User() {
               Username
             </div>
             <div className={styles.pw}>
-              <div>Password</div>
+              <div className={styles.textInfo}>
+                Password
+              </div>
             </div>
             <div className={styles.textInfo}>
               Change password
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles.categories}>
+        <div className={styles.pinnedBox}>
+          <div className={styles.catText}>
+            Pinned
+          </div>
+        </div>
+        <div className={styles.reviewBar}>
+          <div className={styles.catText}>
+            Reviewed
+          </div>
+        </div>
+      </div>
+      <div className={styles.bathrooms}>
+        
       </div>
     </div>
   );

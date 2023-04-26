@@ -3,3 +3,23 @@ body {
   padding: 0;
   margin: 0;
 }
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  src: url('./fonts/static/Montserrat-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat Light';
+  src: url('./fonts/static/Montserrat-Light.ttf')
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url('./fonts/static/Montserrat-Bold.ttf')
+}
+
+@font-face {
+  font-family: 'Abeezee';
+  src: url('./fonts/ABeeZee-Regular.ttf');
+}
