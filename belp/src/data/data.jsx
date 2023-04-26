@@ -38,7 +38,10 @@ export const ratings = [
 ];
 
 // BATHROOM LOGIC
-function bathroomConstructor(title, hours, location, ratings) {
+function bathroomConstructor(title, hours, ratings) {
+  // console.log(title, hours);
+  // console.log(ratings);
+
   function computeRating(ratings) {
     let sum = 0;
     for (let i = 0; i < ratings.length; i++) {
