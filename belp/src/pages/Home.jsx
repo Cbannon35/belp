@@ -75,7 +75,14 @@ export default function Home() {
 
         <div className={styles.bathroomContainer}>
           {bathrooms.map((bathroom, i) => {
-            return <BathroomCard bathroom={bathroom} key={i} />;
+            return (
+              <NavLink
+                to={{ pathname: "/info", state: { bathroom: bathroom } }}
+                key={i}
+              >
+                <BathroomCard bathroom={bathroom} />
+              </NavLink>
+            );
           })}
         </div>
       </div>

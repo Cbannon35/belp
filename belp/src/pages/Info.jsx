@@ -2,20 +2,16 @@
 /* The bathroom should be passed in as a 
 refernce so we can render the correct info */
 import React from "react";
+import styles from "../css/Info.module.css";
+import { NavLink } from "react-router-dom";
+import { Footer } from "../components";
 
 export const Info = ({ bathroom }) => {
+  console.log(bathroom);
   return (
     <div>
-      <NavLink to="/">
-        <div className={styles.backContainer}>
-          <div className={syles.backButton}></div>
-        </div>
-      </NavLink>
-      <NavLink to="/">
-        <div className={styles.mapContainer}>
-          <div className={syles.mapButton}></div>
-        </div>
-      </NavLink>
+      {bathroom.title}
+      <Footer />
     </div>
   );
 };

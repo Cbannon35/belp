@@ -31,9 +31,15 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/user" element={<User />} />
-            <Route path="/info" element={<Info />} />
-            <Route path="/info/review" element={<Review />} />
-            <Route path="/info/reviews" element={<Reviews />} />
+            <Route path="/info" element={<Info bathroom={undefined} />} />
+            <Route
+              path="/info/review"
+              element={(props) => <Review {...props} />}
+            />
+            <Route
+              path="/info/reviews"
+              element={(props) => <Reviews {...props} />}
+            />
           </Routes>
         </BrowserRouter>
       )}
