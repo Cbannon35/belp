@@ -86,8 +86,12 @@
 
 .catSelected {
     font-family: 'Abeezee';
-    background-color: white;
+    background-color: #F3F9FF;
     color: black;
+    border: transparent;
+    width: 750px;
+    font-size: 18px;
+    border-radius: 27px;
 }
 
 .backContainer {
