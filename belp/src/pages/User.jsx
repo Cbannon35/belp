@@ -2,8 +2,13 @@ import React from "react";
 import styles from "../css/User.module.css";
 import userimg from "../assets/user.webp";
 import { NavLink } from "react-router-dom";
+import { useState } from 'react';
 
 export default function User() {
+  
+  const [selectPinned, setSelectPinned] = useState(true)
+  const [selectReviewed, setSelectReviewed] = useState(false)
+
   return (
     <div className={styles.page}>
       <div className={styles.imgContainer}>
@@ -22,11 +27,13 @@ export default function User() {
         </div>
       </div>
       <div className={styles.categories}>
-        <div className={styles.pinnedBox}>
-          <div className={styles.catText}>Pinned</div>
-        </div>
-        <div className={styles.reviewBar}>
-          <div className={styles.catText}>Reviewed</div>
+        <div className={styles.catBox}>
+         <button onClick={() => {setSelectPinned(true); setSelectReviewed(false)}} className={selectPinned ? styles.catSelected : styles.catText}>
+             Pinned
+         </button>
+         <button onClick={() => {setSelectReviewed(true); setSelectPinned(false)}} className={selectReviewed ? styles.catSelected : styles.catText}>
+             Reviewed
+         </button>
         </div>
       </div>
       <div className={styles.bathrooms}></div>

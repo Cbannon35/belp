@@ -60,24 +60,45 @@
 }
 
 .categories {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: row;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catBox {
+    display: flex;
+    flex-direction: row;
+    border-radius: 27px;
+    overflow: hidden;
+    max-width: 700px;
 }
 
 .catText {
-  font-family: "Abeezee";
+    font-family: 'Abeezee';
+    border: none;
+    background-color:#3fa9f5;
+    color: white;
+    height: 50px;
+    width: 700px;
+    font-size: 18px;
+}
+
+.catSelected {
+    font-family: 'Abeezee';
+    background-color: white;
+    color: black;
 }
 
 .backContainer {
-  width: 50px;
-  height: 50px;
-  top: 20px;
-  left: 20px;
-  position: fixed;
-}
-
-.backButton {
-  background-color: #8bc9f3;
-  cursor: grab;
-}
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 20px;
+    position: fixed;
+  }
+  
+  .backButton {
+    background-color: #8bc9f3;
+    cursor: grab;
+  }
