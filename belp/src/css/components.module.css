@@ -1,4 +1,61 @@
 /* CSS For our components.jsx */
-.test {
-  color: black;
+.circleToilet {
+  height: 80px;
+  padding: 10px;
+}
+
+.bathroomCardContainer {
+  height: 150px;
+  border-radius: 10px;
+  border-color: black;
+  box-shadow: 0px 0px 10px #ddd;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+}
+
+.bathroomCardInfo {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  background-color: yellow;
+  min-width: 150px;
+  border-radius: 20px;
+}
+
+.bathroomCardHours {
+  padding: 10px;
+}
+
+/* Footer */
+.footerContainer {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  /* background-color: #3fa9f5; */
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+}
+
+/* .footerLogo {
+  height: 20%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 40px;
+}
+
+.footerText {
+  font-size: 24px;
+  padding: 20px;
+} */
+
+.footerMap {
+  height: 40%;
+  image-rendering: pixelated;
+  padding: 20px;
 }

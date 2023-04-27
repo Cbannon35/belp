@@ -2,12 +2,12 @@ import React from "react";
 import styles from "../css/User.module.css";
 import userimg from "../assets/user.webp";
 import { NavLink } from "react-router-dom";
-import { useState } from 'react';
+import { useState } from "react";
+import { Footer } from "../components";
 
 export default function User() {
-  
-  const [selectPinned, setSelectPinned] = useState(true)
-  const [selectReviewed, setSelectReviewed] = useState(false)
+  const [selectPinned, setSelectPinned] = useState(true);
+  const [selectReviewed, setSelectReviewed] = useState(false);
 
   return (
     <div className={styles.page}>
@@ -28,15 +28,28 @@ export default function User() {
       </div>
       <div className={styles.categories}>
         <div className={styles.catBox}>
-         <button onClick={() => {setSelectPinned(true); setSelectReviewed(false)}} className={selectPinned ? styles.catSelected : styles.catText}>
-             Pinned
-         </button>
-         <button onClick={() => {setSelectReviewed(true); setSelectPinned(false)}} className={selectReviewed ? styles.catSelected : styles.catText}>
-             Reviewed
-         </button>
+          <button
+            onClick={() => {
+              setSelectPinned(true);
+              setSelectReviewed(false);
+            }}
+            className={selectPinned ? styles.catSelected : styles.catText}
+          >
+            Pinned
+          </button>
+          <button
+            onClick={() => {
+              setSelectReviewed(true);
+              setSelectPinned(false);
+            }}
+            className={selectReviewed ? styles.catSelected : styles.catText}
+          >
+            Reviewed
+          </button>
         </div>
       </div>
-      <div className={styles.bathrooms}></div>
+      <div className={styles.bathrooms}>{/*TODO*/}</div>
+      <Footer />
       <NavLink to="/">
         <button className={styles.backContainer}>
           <img src={""} className={styles.backButton} />

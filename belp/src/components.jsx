@@ -3,6 +3,7 @@
 
 import styles from "./css/components.module.css";
 import { AiFillEnvironment } from "react-icons/ai";
+import { NavLink } from "react-router-dom";
 
 export const Sliders = ({ rating }) => {
   return (
@@ -38,26 +39,24 @@ export const Rating = ({ rating, type }) => {
     let calculated_name = "images/belp" + rating.toString() + ".png";
     return (
       <div>
-        <img src={calculated_name}></img>
+        <img src={calculated_name} className={styles.circleToilet}></img>
       </div>
     );
   }
 
-  return (
-    <div className={styles.type}>
-      {type === "five" ? fiveToilets() : circleToilet()}
-    </div>
-  );
+  return <>{type === "five" ? fiveToilets() : circleToilet()}</>;
 };
 
 export const BathroomCard = ({ bathroom }) => {
   return (
-    <div>
+    <div className={styles.bathroomCardContainer}>
       <Rating rating={bathroom.rating} type={"circle"} />
       <div>
-        <AiFillEnvironment />
-        <div>{bathroom.title}</div>
-        <div>{bathroom.hours}</div>
+        <div className={styles.bathroomCardInfo}>
+          <AiFillEnvironment style={{ paddingRight: "10px" }} />
+          <div>{bathroom.title}</div>
+        </div>
+        <div className={styles.bathroomCardHours}>{bathroom.hours}</div>
       </div>
     </div>
   );
@@ -72,6 +71,18 @@ export const ReviewCard = ({ review }) => {
         <Rating rating={review.rating} type={"five"} />
       </div>
       <div>{review.review}</div>
+    </div>
+  );
+};
+
+export const Footer = () => {
+  return (
+    <div className={styles.footerContainer}>
+      {/* <img src="images/BELP.png" className={styles.footerLogo}></img>
+      <div className={styles.footerText}>Made with 💩 by the Belp Team</div> */}
+      <NavLink to="/">
+        <img src="images/map.png" className={styles.footerMap}></img>
+      </NavLink>
     </div>
   );
 };

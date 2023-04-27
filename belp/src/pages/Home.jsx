@@ -5,7 +5,7 @@ import { FiSearch } from "react-icons/fi";
 import user from "../assets/user.webp";
 import { NavLink } from "react-router-dom";
 import { bathrooms } from "../data/data";
-import { BathroomCard } from "../components";
+import { BathroomCard, Footer } from "../components";
 
 // google maps
 import { Loader } from "@googlemaps/js-api-loader";
@@ -68,14 +68,16 @@ export default function Home() {
         </NavLink>
       </div>
 
-      <div className={styles.mapContainer}>
-        <div id="map" className={styles.map}></div>
-      </div>
+      <div className={styles.contentContainer}>
+        <div className={styles.mapContainer}>
+          <div id="map" className={styles.map}></div>
+        </div>
 
-      <div className={styles.bathroomContainer}>
-        {bathrooms.map((bathroom, i) => {
-          return <BathroomCard bathroom={bathroom} key={i} />;
-        })}
+        <div className={styles.bathroomContainer}>
+          {bathrooms.map((bathroom, i) => {
+            return <BathroomCard bathroom={bathroom} key={i} />;
+          })}
+        </div>
       </div>
     </div>
   );
