@@ -10,32 +10,36 @@ import image from "./assets/emptyimg.png"
 export const Sliders = ({ rating }) => {
   return (
     <div>
-      <div>Slider 1 {rating.cleanliness}</div>
-      <div>Slider 2 {rating.privacy}</div>
-      <div>Slider 3 {rating.accessibility}</div>
+      <div>Cleanliness {rating.cleanliness}</div>
+      <div>Privacy {rating.privacy}</div>
+      <div>Accessibility {rating.accessibility}</div>
     </div>
   );
 };
 
 // Type is either "five" or "circle"
 export const Rating = ({ rating, type }) => {
-  const filled_toilet = "images/good_toilet.png";
-  const clear_toilet = "images/bad_toilet.png";
+  const filled_toilet = "/images/good_toilet.png";
+  const clear_toilet = "/images/bad_toilet.png";
   // lol what a name
   // will render a filled toilet or a clear toilet
   function fiveToilets() {
-    <div>
+    return (
+      <div>
       {Array(5)
         .fill(0)
         .map((_, index) => {
           return (
-            <img
+              <img
               src={index < rating ? filled_toilet : clear_toilet}
               key={index}
+              className={styles.fiveToiletRate}
             ></img>
           );
         })}
-    </div>;
+    </div>
+    );
+    
   }
   function circleToilet() {
     let calculated_name = "images/belp" + rating.toString() + ".png";
@@ -86,7 +90,7 @@ export const Footer = () => {
       {/* <img src="images/BELP.png" className={styles.footerLogo}></img>
       <div className={styles.footerText}>Made with 💩 by the Belp Team</div> */}
       <NavLink to="/">
-        <img src="images/map.png" className={styles.footerMap}></img>
+        <img src="/images/map.png" className={styles.footerMap}></img>
       </NavLink>
     </div>
   );
