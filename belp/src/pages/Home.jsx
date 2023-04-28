@@ -76,7 +76,7 @@ export default function Home() {
         <div className={styles.bathroomContainer}>
           {bathrooms.map((bathroom, i) => {
             return (
-              <NavLink
+              <NavLink className={styles.bathroomClick}
                 to={{ pathname: "/info", state: { bathroom: bathroom } }}
                 key={i}
               >

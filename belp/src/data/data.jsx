@@ -60,6 +60,7 @@ function bathroomConstructor(title, hours, ratings) {
 }
 
 export const bathrooms = [
-  bathroomConstructor("Bathroom 1", "9am-5pm", ratings),
-  bathroomConstructor("Bathroom 2", "9am-5pm", ratings),
+  bathroomConstructor("Bathroom 1", "9AM - 5PM", ratings),
+  bathroomConstructor("Bathroom 2", "9AM - 5PM", ratings),
+  bathroomConstructor("Bathroom 3", "9AM - 5PM", ratings)
 ];

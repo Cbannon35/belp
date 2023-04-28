@@ -4,6 +4,8 @@
 import styles from "./css/components.module.css";
 import { AiFillEnvironment } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
+import image from "./assets/emptyimg.png"
+
 
 export const Sliders = ({ rating }) => {
   return (
@@ -50,13 +52,16 @@ export const Rating = ({ rating, type }) => {
 export const BathroomCard = ({ bathroom }) => {
   return (
     <div className={styles.bathroomCardContainer}>
+      <div className={styles.bathroomImg}>
+        <img src={image} className={styles.img} />
+      </div>
       <Rating rating={bathroom.rating} type={"circle"} />
       <div>
         <div className={styles.bathroomCardInfo}>
           <AiFillEnvironment style={{ paddingRight: "10px" }} />
-          <div>{bathroom.title}</div>
+          <div className={styles.bathroomTitle}>{bathroom.title}</div>
         </div>
-        <div className={styles.bathroomCardHours}>{bathroom.hours}</div>
+        <div className={styles.bathroomCardHours}> Hours: {bathroom.hours}</div>
       </div>
     </div>
   );

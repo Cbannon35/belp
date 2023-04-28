@@ -64,6 +64,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .catBox {
@@ -72,6 +73,8 @@
     border-radius: 27px;
     overflow: hidden;
     max-width: 700px;
+    background-color:#3fa9f5;
+    box-shadow: 1px 3px #d4d2d2;
 }
 
 .catText {
@@ -89,7 +92,7 @@
     background-color: #F3F9FF;
     color: black;
     border: transparent;
-    width: 750px;
+    width: 850px;
     font-size: 18px;
     border-radius: 27px;
 }
@@ -100,6 +103,18 @@
     top: 20px;
     left: 20px;
     position: fixed;
+  }
+
+  .bathroomClick {
+    text-decoration: none;
+  }
+
+  .bathrooms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
   }
   
   .backButton {
