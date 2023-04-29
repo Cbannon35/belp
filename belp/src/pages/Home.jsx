@@ -6,6 +6,7 @@ import user from "../assets/user.webp";
 import { NavLink } from "react-router-dom";
 import { bathrooms } from "../data/data";
 import { BathroomCard, Footer } from "../components";
+import { Rating } from "../components";
 
 // google maps
 import { Loader } from "@googlemaps/js-api-loader";
@@ -72,11 +73,14 @@ export default function Home() {
         <div className={styles.mapContainer}>
           <div id="map" className={styles.map}></div>
         </div>
+        <div>hi?</div>
+        <Rating rating={2} type={"five"} />
 
         <div className={styles.bathroomContainer}>
           {bathrooms.map((bathroom, i) => {
             return (
-              <NavLink className={styles.bathroomClick}
+              <NavLink
+                className={styles.bathroomClick}
                 to={{ pathname: "/info", state: { bathroom: bathroom } }}
                 key={i}
               >

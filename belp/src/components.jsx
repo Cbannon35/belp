@@ -4,8 +4,7 @@
 import styles from "./css/components.module.css";
 import { AiFillEnvironment } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
-import image from "./assets/emptyimg.png"
-
+import image from "./assets/emptyimg.png";
 
 export const Sliders = ({ rating }) => {
   return (
@@ -24,18 +23,20 @@ export const Rating = ({ rating, type }) => {
   // lol what a name
   // will render a filled toilet or a clear toilet
   function fiveToilets() {
-    <div>
-      {Array(5)
-        .fill(0)
-        .map((_, index) => {
-          return (
-            <img
-              src={index < rating ? filled_toilet : clear_toilet}
-              key={index}
-            ></img>
-          );
-        })}
-    </div>;
+    return (
+      <div>
+        {Array(5)
+          .fill(0)
+          .map((_, index) => {
+            return (
+              <img
+                src={index < rating ? filled_toilet : clear_toilet}
+                key={index}
+              ></img>
+            );
+          })}
+      </div>
+    );
   }
   function circleToilet() {
     let calculated_name = "images/belp" + rating.toString() + ".png";

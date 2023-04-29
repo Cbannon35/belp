@@ -6,7 +6,8 @@ import styles from "../css/Info.module.css";
 import { NavLink } from "react-router-dom";
 import { Footer } from "../components";
 
-export const Info = ({ bathroom }) => {
+export const Info = (props) => {
+  const bathroom = props.location.state.bathroom;
   console.log(bathroom);
   return (
     <div>
