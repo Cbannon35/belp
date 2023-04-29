@@ -6,9 +6,10 @@
   position: fixed;
 }
 
-.backButton {
-  background-color: #8bc9f3;
+
+.arrowLeft {
   cursor: grab;
+  color: #1FA5FF;
 }
 
 .mapContainer {
@@ -23,3 +24,74 @@
   background-color: #f6f8f9;
   cursor: grab;
 }
+
+.upper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 75px;
+}
+
+.bathroomTitle {
+  background-color: #E7C15F;
+  width: 20%;
+  font-family: 'Montserrat Bold';
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ratingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.ReviewBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.reviewText {
+  font-family: 'Montserrat Medium';
+  font-size: 12px;
+  width: 300px;
+  height: 150px;
+  border-radius: 15px;
+  padding: 5px;
+  border: transparent;
+  box-shadow: 1px 4px 6px #aba9a9;
+}
+
+.SubmitSection{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.submitButton{
+  border: transparent;
+  color: white;
+  background-color:#3fa9f5;
+  box-shadow: 1px 3px #d4d2d2;
+  border-radius: 15px;
+  font-family: 'Montserrat Light';
+  font-size: 12px;
+  height: 35px;
+  width: 250px;
+}
+
+.slideDeez {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+
