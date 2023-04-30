@@ -23,6 +23,11 @@ function App() {
   }, []);
 
   return (
+    // <>
+    //   {/* <code>
+    //     <pre>{JSON.stringify(firebaseApp.options, null, 2)}</pre>
+    //   </code> */}
+    // </>
     <>
       {loadscreen ? (
         <Loading />
