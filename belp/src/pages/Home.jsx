@@ -3,9 +3,9 @@ import styles from "../css/Home.module.css";
 import { useState, useEffect } from "react";
 import { FiSearch } from "react-icons/fi";
 import user from "../assets/user.webp";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { bathrooms } from "../data/data";
-import { BathroomCard, Footer } from "../components";
+import { BathroomCard } from "../components";
 import { Rating } from "../components";
 
 // google maps
@@ -77,14 +77,14 @@ export default function Home() {
         <div className={styles.bathroomContainer}>
           {bathrooms.map((bathroom, i) => {
             return (
-              <Link
+              <NavLink
                 className={styles.bathroomClick}
                 to="/info"
                 state={{ bathroom: bathroom, prev: "/" }}
                 key={i}
               >
                 <BathroomCard bathroom={bathroom} />
-              </Link>
+              </NavLink>
             );
           })}
         </div>
