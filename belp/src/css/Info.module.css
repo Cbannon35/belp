@@ -6,11 +6,10 @@
   position: fixed;
 }
 
-.backButton {
-  background-color: #8bc9f3;
+.arrowLeft {
   cursor: grab;
+  color: #1fa5ff;
 }
-
 .mapContainer {
   width: 50px;
   height: 50px;

@@ -6,10 +6,9 @@
   position: fixed;
 }
 
-
 .arrowLeft {
   cursor: grab;
-  color: #1FA5FF;
+  color: #1fa5ff;
 }
 
 .mapContainer {
@@ -34,9 +33,9 @@
 }
 
 .bathroomTitle {
-  background-color: #E7C15F;
+  background-color: #e7c15f;
   width: 20%;
-  font-family: 'Montserrat Bold';
+  font-family: "Montserrat Bold";
   padding: 5px;
   font-size: 20px;
   border-radius: 20px;
@@ -59,7 +58,7 @@
 }
 
 .reviewText {
-  font-family: 'Montserrat Medium';
+  font-family: "Montserrat Medium";
   font-size: 12px;
   width: 300px;
   height: 150px;
@@ -69,19 +68,19 @@
   box-shadow: 1px 4px 6px #aba9a9;
 }
 
-.SubmitSection{
+.SubmitSection {
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
 
-.submitButton{
+.submitButton {
   border: transparent;
   color: white;
-  background-color:#3fa9f5;
+  background-color: #3fa9f5;
   box-shadow: 1px 3px #d4d2d2;
   border-radius: 15px;
-  font-family: 'Montserrat Light';
+  font-family: "Montserrat Light";
   font-size: 12px;
   height: 35px;
   width: 250px;
@@ -93,5 +92,3 @@
   align-items: center;
   margin-top: 50px;
 }
-
-

@@ -1,10 +1,19 @@
 /* List of a bathroom's reviews */
-export const Reviews = ({ bathroom }) => {
+import React from "react";
+import styles from "../css/Reviews.module.css";
+import { NavLink, useLocation } from "react-router-dom";
+import { ReviewCard } from "../components";
+import { FiArrowLeft } from "react-icons/fi";
+
+export const Reviews = () => {
+  const location = useLocation();
+  const { state: { bathroom, prev } = {} } = location;
+
   return (
     <div>
-      <NavLink to="/info">
+      <NavLink to={prev} state={{ bathroom: bathroom, prev: "/</div>" }}>
         <div className={styles.backContainer}>
-          <div className={syles.backButton}></div>
+          <div className={styles.backButton}></div>
         </div>
       </NavLink>
 
@@ -14,7 +23,7 @@ export const Reviews = ({ bathroom }) => {
 
       <NavLink to="/">
         <div className={styles.mapContainer}>
-          <div className={syles.mapButton}></div>
+          <div className={styles.mapButton}></div>
         </div>
       </NavLink>
     </div>

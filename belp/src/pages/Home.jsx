@@ -80,7 +80,7 @@ export default function Home() {
               <Link
                 className={styles.bathroomClick}
                 to="/info"
-                state={{ bathroom: bathroom }}
+                state={{ bathroom: bathroom, prev: "/" }}
                 key={i}
               >
                 <BathroomCard bathroom={bathroom} />

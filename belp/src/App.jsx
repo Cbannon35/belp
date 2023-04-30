@@ -38,14 +38,8 @@ function App() {
             <Route path="/user" element={<User />} />
             {/* <Route path="/info" Component={Info} /> */}
             <Route path="/info" element={<Info />} />
-            <Route
-              path="/info/review"
-              element={(props) => <Review {...props} />}
-            />
-            <Route
-              path="/info/reviews"
-              element={(props) => <Reviews {...props} />}
-            />
+            <Route path="/info/review" element={<Review />} />
+            <Route path="/reviews" element={<Reviews />} />
           </Routes>
         </BrowserRouter>
       )}
