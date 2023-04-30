@@ -73,8 +73,6 @@ export default function Home() {
         <div className={styles.mapContainer}>
           <div id="map" className={styles.map}></div>
         </div>
-        <div>hi?</div>
-        <Rating rating={2} type={"five"} />
 
         <div className={styles.bathroomContainer}>
           {bathrooms.map((bathroom, i) => {
