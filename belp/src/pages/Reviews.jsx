@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "../css/Reviews.module.css";
 import { NavLink, useLocation } from "react-router-dom";
-import { ReviewCard } from "../components";
+import { Footer, ReviewCard } from "../components";
 import { FiArrowLeft } from "react-icons/fi";
 
 export const Reviews = () => {
@@ -11,9 +11,11 @@ export const Reviews = () => {
 
   return (
     <div>
-      <NavLink to={prev} state={{ bathroom: bathroom, prev: "/</div>" }}>
+      <NavLink to={prev} state={{ bathroom: bathroom, prev: "/" }}>
         <div className={styles.backContainer}>
-          <div className={styles.backButton}></div>
+          <div className={styles.backButton}>
+            <FiArrowLeft className={styles.arrowLeft} size={33} />
+          </div>
         </div>
       </NavLink>
 
@@ -21,11 +23,7 @@ export const Reviews = () => {
         <ReviewCard review={rating} key={index} />
       ))}
 
-      <NavLink to="/">
-        <div className={styles.mapContainer}>
-          <div className={styles.mapButton}></div>
-        </div>
-      </NavLink>
+      <Footer />
     </div>
   );
 };

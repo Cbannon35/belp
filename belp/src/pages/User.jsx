@@ -4,8 +4,8 @@ import userimg from "../assets/user.webp";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { BathroomCard, Footer } from "../components";
-import { bathrooms } from "../data/data"
-
+import { bathrooms } from "../data/data";
+import { FiArrowLeft } from "react-icons/fi";
 
 export default function User() {
   const [selectPinned, setSelectPinned] = useState(true);
@@ -51,21 +51,26 @@ export default function User() {
         </div>
       </div>
       <div className={styles.bathrooms}>
-      {bathrooms.map((bathroom, i) => {
-            return (
-              <NavLink className={styles.bathroomClick}
-                to={{ pathname: "/info", state: { bathroom: bathroom } }}
-                key={i}>
-                <BathroomCard bathroom={bathroom} />
-              </NavLink>
-            );
-          })}
+        {bathrooms.map((bathroom, i) => {
+          return (
+            <NavLink
+              className={styles.bathroomClick}
+              to={selectPinned ? "/info" : "/reviews"}
+              state={{ bathroom: bathroom, prev: "/user" }}
+              key={i}
+            >
+              <BathroomCard bathroom={bathroom} />
+            </NavLink>
+          );
+        })}
       </div>
       <Footer />
       <NavLink to="/">
-        <button className={styles.backContainer}>
-          <img src={""} className={styles.backButton} />
-        </button>
+        <div className={styles.backContainer}>
+          <div className={styles.backButton}>
+            <FiArrowLeft className={styles.arrowLeft} size={33} />
+          </div>
+        </div>
       </NavLink>
     </div>
   );

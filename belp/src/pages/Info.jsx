@@ -13,7 +13,7 @@ export const Info = () => {
 
   return (
     <>
-      <NavLink to="/info" state={{ bathroom: bathroom }}>
+      <NavLink to={prev} state={{ bathroom: bathroom }}>
         <div className={styles.backContainer}>
           <div className={styles.backButton}>
             <FiArrowLeft className={styles.arrowLeft} size={33} />
