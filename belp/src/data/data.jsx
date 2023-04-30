@@ -38,7 +38,7 @@ export const ratings = [
 ];
 
 // BATHROOM LOGIC
-function bathroomConstructor(title, hours, ratings) {
+function bathroomConstructor(title, hours, ratings, image) {
   // console.log(title, hours);
   // console.log(ratings);
 
@@ -51,16 +51,16 @@ function bathroomConstructor(title, hours, ratings) {
   }
 
   return {
-    //also need bathroom image
+    image: image,
     title: title,
     hours: hours,
     rating: computeRating(ratings),
     ratings: ratings,
   };
 }
-
+import image from "../assets/emptyimg.png";
 export const bathrooms = [
-  bathroomConstructor("Bathroom 1", "9AM - 5PM", ratings),
-  bathroomConstructor("Bathroom 2", "9AM - 5PM", ratings),
-  bathroomConstructor("Bathroom 3", "9AM - 5PM", ratings)
+  bathroomConstructor("Bathroom 1", "9AM - 5PM", ratings, image),
+  bathroomConstructor("Bathroom 2", "9AM - 5PM", ratings, image),
+  bathroomConstructor("Bathroom 3", "9AM - 5PM", ratings, image),
 ];

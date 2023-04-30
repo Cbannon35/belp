@@ -3,7 +3,7 @@ import styles from "../css/Home.module.css";
 import { useState, useEffect } from "react";
 import { FiSearch } from "react-icons/fi";
 import user from "../assets/user.webp";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { bathrooms } from "../data/data";
 import { BathroomCard, Footer } from "../components";
 import { Rating } from "../components";
@@ -77,13 +77,14 @@ export default function Home() {
         <div className={styles.bathroomContainer}>
           {bathrooms.map((bathroom, i) => {
             return (
-              <NavLink
+              <Link
                 className={styles.bathroomClick}
-                to={{ pathname: "/info", state: { bathroom: bathroom } }}
+                to="/info"
+                state={{ bathroom: bathroom }}
                 key={i}
               >
                 <BathroomCard bathroom={bathroom} />
-              </NavLink>
+              </Link>
             );
           })}
         </div>

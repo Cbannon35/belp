@@ -3,16 +3,13 @@
 refernce so we can render the correct info */
 import React from "react";
 import styles from "../css/Info.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useParams } from "react-router-dom";
 import { Footer } from "../components";
 
-export const Info = (props) => {
-  const bathroom = props.location.state.bathroom;
+export const Info = () => {
+  const location = useLocation();
+  const { state: { bathroom } = {} } = location;
   console.log(bathroom);
-  return (
-    <div>
-      {bathroom.title}
-      <Footer />
-    </div>
-  );
+
+  return <div>{bathroom.title}</div>;
 };
