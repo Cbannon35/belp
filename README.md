@@ -4,7 +4,7 @@ Visit us <a href="https://belp-a49b8.web.app">here</a>
 
 # team
 <ul>
-  <li><a href="cbannon.com" target="_blank">christopher</a></li>
+  <li><a href="https://cbannon.com" target="_blank">christopher</a></li>
   <li><a href="https://github.com/jesslee0505" target="_blank">jess</a></li>
   <li><a href="https://github.com/chetoau" target="_blank">nhu</a></li>
   <!-- <li><a href="https://uyentphan.com/" target="_blank"></a></li> -->
